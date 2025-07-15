@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
           displayPanel.textContent = "Error";
         }
-      } else if (buttonText === "C") {
+      } else if (buttonText === "Clear") {
         displayPanel.textContent = "";
       } else {
         displayPanel.textContent += buttonText;
