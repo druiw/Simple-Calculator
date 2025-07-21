@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 70px;
+  gap: 45px;
   width: 100%;
   max-width: 1800px;
   height: 863px;
@@ -36,23 +36,52 @@ body {
   justify-content: flex-end;
   width: 300px;
   height: 500px;
-  background-color: #efc3ca;
+  --bg: #efc3ca; /* default background */
+  --btn-text: #efc3ca; /* default text color */
+  background-color: var(--bg);
   border-radius: 30px;
   padding: 30px;
   gap: 30px;
 }
 
 .display-panel {
-  background-color: white;
-  width: 100%;
-  height: 175px;
-  border-radius: 30px;
+  position: relative;
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+  background: white;
+  border-radius: 1rem;
+  font-family: Oribtron, sans-serif;
+  font-size: 60px;
   text-align: right;
-  overflow-x: auto;
-  overflow-y: hidden;
-  line-height: 170px;
-  font-size: 4rem;
-  font-family: "DSEG7Classic", monospace;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+}
+
+.screen.is-active {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.color-display {
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.btn {
+  border: none;
+  all: unset;
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .below-display {
@@ -67,6 +96,7 @@ body {
   align-items: center;
   width: 100%;
   height: 55px;
+  gap: 10px;
 }
 
 .button-panel {
@@ -87,5 +117,40 @@ body {
   cursor: pointer;
   border: none;
   font-size: 2rem;
-  color: #efc3ca;
+  color: var(--btn-text);
+}
+
+.btn--red {
+  background: #c79098;
+  color: white;
+}
+.btn--green {
+  background: #c3d9c4;
+  color: white;
+}
+.btn--blue {
+  background: #b2c9e2;
+  color: white;
+}
+
+.btn--pink {
+  background: #efc3ca;
+  color: white;
+}
+
+.btn--brown {
+  background: #cfac94;
+  color: white;
+}
+
+.btn--lavender {
+  background: #d5daee;
+}
+
+.btn--yellow {
+  background: #f9e9be;
+}
+
+.btn--dirt {
+  background-color: #c9bda5;
 }

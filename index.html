@@ -9,15 +9,35 @@
       href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="calculator-base">
-        <div class="display-panel"></div>
+        <div class="display-panel">
+          <div class="screen calc-screen is-active">
+            <div class="screen-content"></div>
+          </div>
+          <!-- Color Picker Hidden by Default -->
+          <div class="screen color-display">
+            <button class="btn btn--pink"></button>
+            <button class="btn btn--lavender"></button>
+            <button class="btn btn--yellow"></button>
+            <button class="btn btn--dirt"></button>
+            <button class="btn btn--green"></button>
+            <button class="btn btn--blue"></button>
+            <button class="btn btn--red"></button>
+            <button class="btn btn--brown"></button>
+          </div>
+        </div>
         <div class="below-display">
           <div class="clear-panel">
-            <button class="button">Clear</button>
+            <button id="Color" class="button">Color</button>
+            <button id="Clear" class="button">Clear</button>
           </div>
           <div class="button-panel">
             <button class="button">7</button>
